@@ -1,6 +1,6 @@
 var endTime;
 var interval;
-var canvasSize = 800;
+var canvasSize = 600;
 
 const hourTicks = 1 * 60 * 60 * 1000;
 const LIGHT_COLOR = '#f9eb25';
@@ -61,8 +61,7 @@ function drawClock() {
 	
 	if (ticksLeft == 0) {
 		stopTimer();
-		var audio = new Audio('Game-over-yeah.mp3');
-		audio.play();
+		document.getElementById("sound").play();
 	}
 }
 
@@ -131,7 +130,7 @@ function drawText(ticksLeft, context){
 	context.shadowOffsetY = 3;
 	context.shadowColor = ticksLeft > (1000 * 5 * 60) ? "#a03209" : "#2d0300";
 	
-	var fontHeight = 156;
+	var fontHeight = 112;
 	context.font = fontHeight + "px clockFont";
 	context.fillStyle = ticksLeft > (1000 * 5 * 60) ? LIGHT_COLOR : "#d31d10";
 	var text = padNumber(minutes) + ":" + padNumber(seconds) + ":" + padNumber(milliseconds);
