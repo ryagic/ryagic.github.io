@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+
+  <title>Clock</title>
+  <meta name="description" content="Clock">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="./styles.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="./main.js"></script>
+  
 </head>
 
 <body>
-	Hello world from github!
+	  <button id="start" onClick="startTimer()">Start</button>
+	<button id="stop" onClick="stopTimer()">Stop</button>
+	  <input type="number" id="time" value="60">
+	<br />
+	<div id="container">
+		<canvas id="clock">Canvas not supported!</canvas>
+	</div>
+	<div style="font-family: clockFont;">.</div>
 </body>
 </html>
